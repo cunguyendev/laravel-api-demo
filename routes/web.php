@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => '/'], function() {
+    Route::get('/user', [
+        'as' => 'api.index',
+        'uses' => 'App\Http\Controllers\UserController@getUser']
+    );
+});
