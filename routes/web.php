@@ -22,4 +22,9 @@ Route::group(['prefix' => '/'], function() {
         'as' => 'api.index',
         'uses' => 'App\Http\Controllers\UserController@getUser']
     );
+
+    Route::post('/user', [
+        'as' => 'api.index',
+        'uses' => 'App\Http\Controllers\UserController@addUser']
+    );
 });

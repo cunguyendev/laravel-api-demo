@@ -7,9 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserModel extends Model
 {
+    public $timestamps = false;
     protected $table = "user";
     protected $fillable = [
+        'id',
         'name',
+        'age',
+        'createAt',
     ];
 
     use HasFactory;
